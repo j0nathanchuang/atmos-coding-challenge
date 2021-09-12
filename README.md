@@ -1,7 +1,7 @@
 # Atmos Coding Challenge by [Jonathan Chuang](https://jonathanchuang.me/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
----
+
 ## Libraries
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [react-redux](https://react-redux.js.org/tutorials/quick-start)
