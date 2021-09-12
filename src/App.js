@@ -1,24 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-// Views
-import Homes from "./views/Homes";
-import Lots from "./views/Lots";
-import Error from "./views/Error";
+import Routes from "./constants/routes";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/homes">
-          <Homes />
-        </Route>
-        <Route exact path="/lots">
-          <Lots />
-        </Route>
-        <Route path="*">
-          <Error />
-        </Route>
+        {Routes.map((route) => {
+          const { path, component } = route;
+          return (
+            <Route exact path={path}>
+              {component}
+            </Route>
+          )
+        })}
       </Switch>
     </Router>
   );

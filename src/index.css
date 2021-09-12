@@ -6,3 +6,38 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* SIDEBAR STYLING */
+.MuiDrawer-paper {
+  padding-top: 30px;
+  width: 15vw;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+}
+
+.Mui-selected {
+  color: #e69500 !important;
+}
+
+/* SHARED STYLING */
+.main {
+  margin-top: 50px;
+}
+
+.primary-btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.primary-btn:hover {
+  transition-duration: 0.5s;
+  background-color: black;
+  color: white;
+}
