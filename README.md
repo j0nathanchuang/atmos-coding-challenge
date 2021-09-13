@@ -23,6 +23,6 @@ You will also see any lint errors in the console.
 ## File Organization
 - Views: Complete page views built with components
 - Components: Building blocks to create view pages
-- API: Mock api
+- api: Mock API
 - Store: redux store
 - Reducers: redux reducers

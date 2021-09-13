@@ -24,6 +24,7 @@ export default function Lots() {
               return (
                 <Grid item xs={4}>
                   <Card
+                    type="lots"
                     title={address}
                     subtitle={`${acres} acres - ${(acres * 43560) | 0} sqft`}
                     description={description}

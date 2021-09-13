@@ -4,7 +4,6 @@ import Container from "@material-ui/core/Container";
 import Sidebar from "../components/navigation/Sidebar";
 import Button from "../components/shared/Button";
 import Card from "../components/shared/Card";
-
 import { API } from "../api/mock-api";
 
 export default function Homes() {
@@ -34,6 +33,7 @@ export default function Homes() {
               return (
                 <Grid item xs={4}>
                   <Card
+                    type="homes"
                     title={name}
                     subtitle={`${numBeds} beds - ${numBaths} baths - ${sqft} sqft`}
                     image={image}
