@@ -21,9 +21,26 @@ export default function Homes() {
           <Button text="Show Saved Homes" />
           <Grid container spacing={2}>
             {homes.map((home) => {
+              const {
+                name,
+                numBeds,
+                numBaths,
+                sqft,
+                tags,
+                description,
+                image,
+                favored,
+              } = home;
               return (
                 <Grid item xs={4}>
-                  <Card details={home} />
+                  <Card
+                    title={name}
+                    subtitle={`${numBeds} beds - ${numBaths} baths - ${sqft} sqft`}
+                    image={image}
+                    tags={tags}
+                    description={description}
+                    favored={favored}
+                  />
                 </Grid>
               );
             })}

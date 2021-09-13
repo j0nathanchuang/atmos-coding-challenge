@@ -18,13 +18,21 @@ export default function Lots() {
       <Grid item xs={10}>
         <Container className="main">
           <Button text="Show Saved Lots" />
-          {lots.map((lot) => {
+          <Grid container spacing={2}>
+            {lots.map((lot) => {
+              const { address, acres, description, image } = lot;
               return (
                 <Grid item xs={4}>
-                  {lot.description}
+                  <Card
+                    title={address}
+                    subtitle={`${acres} acres - ${(acres * 43560) | 0} sqft`}
+                    description={description}
+                    image={image}
+                  />
                 </Grid>
               );
             })}
+          </Grid>
         </Container>
       </Grid>
     </Grid>

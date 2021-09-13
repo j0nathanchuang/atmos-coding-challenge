@@ -6,9 +6,14 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import Tag from "./Tag";
 
-export default function DisplayCard({ details }) {
-  const { name, numBeds, numBaths, sqft, tags, description, image, favored } =
-    details;
+export default function DisplayCard({
+  title,
+  subtitle,
+  image,
+  tags,
+  description,
+  favored,
+}) {
   return (
     <Card className="display-card">
       <div className="favorite-icon">
@@ -18,13 +23,11 @@ export default function DisplayCard({ details }) {
           <FavoriteBorderIcon fontSize="large" />
         )}
       </div>
-      <CardMedia component="img" height="180" image={image} alt={name} />
+      <CardMedia component="img" height="180" image={image} alt={title} />
       <CardContent>
-        <h2>{name}</h2>
-        <h5>
-          {numBeds} beds - {numBaths} baths - {sqft} sqft
-        </h5>
-        {tags.map((tag) => {
+        <h2>{title}</h2>
+        <h5>{subtitle}</h5>
+        {(tags) && tags.map((tag) => {
           return <Tag text={tag} />;
         })}
         <p>{description}</p>
