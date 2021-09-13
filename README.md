@@ -35,3 +35,5 @@ A list of features that could've been implemented better/would've loved to discu
 - [Usage of Material UI Modal](https://github.com/j0nathanchuang/atmos-coding-challenge/blob/main/src/components/shared/Modal.jsx): See comment in the attached file
 - [Best usage of URL queries](https://github.com/j0nathanchuang/atmos-coding-challenge/blob/main/src/components/shared/Card.jsx): Certainly not the best solution in terms of code organization and UX because of Modal bugs
 - [Best usage of Redux](https://github.com/j0nathanchuang/atmos-coding-challenge/tree/main/src/reducers): Not proficient in redux yet, only familiar with an already built out redux code base at Capital One. Struggled to build from scratch.
+- [Usage of PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html): I think I definitely should've used this (learned about this good practice at Capital One)
+- Duplicate code: in hindsight, I used a lot of duplicate code to format text, could be put into util functions

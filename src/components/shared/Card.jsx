@@ -45,7 +45,7 @@ export default function DisplayCard({
 
   function clickFavorite(e) {
     e.stopPropagation();
-    dispatch(reducer({ index: id }));
+    dispatch(reducer({ id: id }));
   }
   return (
     <Card className="display-card" onClick={handleClick}>

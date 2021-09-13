@@ -31,13 +31,13 @@ function LotsAbstraction() {
         <Container className="main">
           <Button text="Show Saved Lots" />
           <Grid container spacing={2}>
-            {lots.map((lot, idx) => {
-              const { address, acres, description, image, favorited } = lot;
+            {lots.map((lot) => {
+              const { lotId, address, acres, description, image, favorited } = lot;
               return (
                 <Grid item xs={4}>
                   <Card
                     type="lots"
-                    id={idx}
+                    id={lotId}
                     title={address}
                     subtitle={`${acres} acres - ${(acres * 43560) | 0} sqft`}
                     description={description}

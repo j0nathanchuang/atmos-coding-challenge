@@ -9,8 +9,10 @@ export const homeSlice = createSlice({
   },
   reducers: {
     favorite: (state, action) => { 
-      state.homes.at(action.payload.index).favorited = !state.homes.at(
-        action.payload.index
+      // Bad design, trying to use this map method but not working
+      // state.homes.map((home) => { return home.homePlanId === action.payload.id ? home.favorite = !home.favorite : home });
+      state.homes.at(action.payload.id - 1).favorited = !state.homes.at(
+        action.payload.id - 1
       ).favorited;
     },
   },

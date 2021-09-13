@@ -30,8 +30,9 @@ function HomesAbstraction() {
         <Container className="main">
           <Button text="Show Saved Homes" />
           <Grid container spacing={2}>
-            {homes.map((home, idx) => {
+            {homes.map((home) => {
               const {
+                homePlanId,
                 name,
                 numBeds,
                 numBaths,
@@ -45,7 +46,7 @@ function HomesAbstraction() {
                 <Grid item xs={4}>
                   <Card
                     type="homes"
-                    id={idx}
+                    id={homePlanId}
                     title={name}
                     subtitle={`${numBeds} beds - ${numBaths} baths - ${sqft} sqft`}
                     image={image}

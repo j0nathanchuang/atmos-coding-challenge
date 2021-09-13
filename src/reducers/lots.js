@@ -9,8 +9,9 @@ export const lotSlice = createSlice({
   },
   reducers: {
     favorite: (state, action) => {
-      state.lots.at(action.payload.index).favorited = !state.lots.at(
-        action.payload.index
+      // Bad design, see homes.js
+      state.lots.at(action.payload.id - 1).favorited = !state.lots.at(
+        action.payload.id - 1
       ).favorited;
     },
   },
