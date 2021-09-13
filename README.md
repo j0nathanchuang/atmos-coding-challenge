@@ -24,5 +24,6 @@ You will also see any lint errors in the console.
 - Views: Complete page views built with components
 - Components: Building blocks to create view pages
 - api: Mock API
+- Constants: Constant data
 - Store: redux store
 - Reducers: redux reducers

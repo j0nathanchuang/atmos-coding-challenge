@@ -85,16 +85,21 @@ body {
 }
 
 .modal {
+  overflow: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .modal-card {
-  overflow-y: scroll;
+  overflow: scroll;
   background-color: white;
   width: 60vw;
   height: 65vh;
+}
+
+.modal-card > * {
+  overflow: scroll;
 }
 
 .modal-card img {

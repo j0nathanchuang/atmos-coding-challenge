@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import Modal from "@material-ui/core/Modal";
 import Card from "@material-ui/core/Card";
@@ -15,19 +16,24 @@ import Tag from "./Tag";
  * I tried it with useState like the docs, but the component won't close
  * on outside click
  * Weirdly pressing ESC can close it...
+ *
+ * BUG 2: Cannot scroll...by default it should be scrollable
  */
 export default function DetailedSummary({
   type,
+  id,
   title,
   subtitle,
   image,
   tags,
   description,
-  favored,
+  favorited,
   query,
   open,
   handleClose,
+  reducer,
 }) {
+  const dispatch = useDispatch();
   return (
     <Modal className="modal" open={open} onClose={handleClose}>
       <Card className="modal-card">
@@ -39,8 +45,11 @@ export default function DetailedSummary({
             <Grid item xs={6}>
               <h2>
                 {title}
-                <div className="modal-favorite-icon">
-                  {favored ? (
+                <div
+                  className="modal-favorite-icon"
+                  onClick={() => dispatch(reducer({ index: id }))}
+                >
+                  {favorited ? (
                     <FavoriteIcon fontSize="large" />
                   ) : (
                     <FavoriteBorderIcon fontSize="large" />

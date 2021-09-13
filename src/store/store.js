@@ -1,5 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import homesReducer from "../reducers/homes";
+import lotsReducers from "../reducers/lots";
 
 export default configureStore({
-  reducer: {},
+  reducer: {
+    homes: homesReducer,
+    lots: lotsReducers,
+  },
 });
