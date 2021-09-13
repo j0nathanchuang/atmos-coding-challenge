@@ -14,7 +14,7 @@ import { favorite as lotFavorite } from "../../reducers/lots";
 
 /*
  * FIXME:
- * Having trouble understanding this documentation:
+ * BUG 1: Having trouble understanding this documentation:
  * https://material-ui.com/components/dialogs/#dialog
  * I tried it with useState like the docs, but the component won't close
  * on outside click
@@ -31,7 +31,6 @@ export default function DetailedSummary({
   tags,
   description,
   favorited,
-  query,
   open,
   handleClose,
   reducer,
@@ -160,12 +159,6 @@ export default function DetailedSummary({
                 </Grid>
               );
             })}
-            <Grid item xs={4}>
-              <DisplayCard title="TODO" />
-            </Grid>
-            <Grid item xs={4}>
-              <DisplayCard title="TODO" />
-            </Grid>
           </Grid>
         </CardContent>
       </Card>

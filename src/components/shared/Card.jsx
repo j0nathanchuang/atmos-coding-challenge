@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router";
+// import { useLocation } from "react-router";
 import { useDispatch } from "react-redux";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -20,23 +20,23 @@ export default function DisplayCard({
   favorited,
   reducer,
 }) {
-  const { search } = useLocation();
-  const query = new URLSearchParams(search);
-  const selected = query.get("selectedHomePlan") || query.get("selectedLot");
-
   const dispatch = useDispatch();
-
   const [open, setOpen] = useState(false);
+
+  /* ATTEMPT AT CREATING QUERIES */
+  // const { search } = useLocation();
+  // const query = new URLSearchParams(search);
+  // const selected = query.get("selectedHomePlan") || query.get("selectedLot");
+
   function handleClick() {
     // if (type === "homes") {
     //   window.open(`/homes?selectedHomePlan=${title}`, "_self");
-    // } else {
+    //   query.set('selectedHomePlan', title);
+    //   window.location.search = query;
+    // } else { // type === "lots"
     //   window.open(`/lots?selectedLot=${title}`, "_self");
     // }
-
     setOpen(true);
-    // query.set('selectedHomePlan', title);
-    // window.location.search = query;
   }
 
   function handleClose() {
@@ -75,7 +75,6 @@ export default function DisplayCard({
         tags={tags}
         description={description}
         favorited={favorited}
-        query={query}
         open={open}
         handleClose={handleClose}
         reducer={reducer}

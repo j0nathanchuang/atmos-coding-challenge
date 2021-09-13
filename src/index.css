@@ -85,7 +85,6 @@ body {
 }
 
 .modal {
-  overflow: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
