@@ -27,3 +27,11 @@ You will also see any lint errors in the console.
 - Constants: Constant data
 - Store: redux store
 - Reducers: redux reducers
+
+## Bugs/Future Improvements
+
+A list of features that could've been implemented better/would've loved to discuss with a co-worker to figure out
+
+- [Usage of Material UI Modal](https://github.com/j0nathanchuang/atmos-coding-challenge/blob/main/src/components/shared/Modal.jsx): See comment in the attached file
+- [Best usage of URL queries](https://github.com/j0nathanchuang/atmos-coding-challenge/blob/main/src/components/shared/Card.jsx): Certainly not the best solution in terms of code organization and UX because of Modal bugs
+- [Best usage of Redux](https://github.com/j0nathanchuang/atmos-coding-challenge/tree/main/src/reducers): Not proficient in redux yet, only familiar with an already built out redux code base at Capital One. Struggled to build from scratch.
